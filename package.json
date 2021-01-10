@@ -1,0 +1,30 @@
+{
+  "name": "guide",
+  "version": "0.0.1",
+  "description": "A guide for building a Discord music bot with DisTube.",
+  "authors": {
+    "name": "Skick",
+    "email": "skick1234@gmail.com"
+  },
+  "repository": "distubejs/DisTube-Guide",
+  "scripts": {
+    "lint": "eslint . --ext js,md,vue",
+    "lint:fix": "eslint . --ext js,md,vue --fix",
+    "dev": "vuepress dev src",
+    "build": "NODE_ENV=production vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.16.0",
+    "eslint-config-sora": "^3.1.0",
+    "eslint-plugin-markdown": "^1.0.2",
+    "eslint-plugin-vue": "^7.4.0",
+    "vuepress": "^1.7.1"
+  },
+  "dependencies": {
+    "@vuepress/plugin-google-analytics": "^1.7.1",
+    "vuepress-plugin-element-tabs": "^0.2.8",
+    "vuepress-theme-succinct": "github:distubejs/vuepress-theme-succinct"
+  }
+}

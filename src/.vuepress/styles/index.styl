@@ -1,0 +1,24 @@
+/**
+ * Custom Styles here.
+ *
+ * ref：https://v1.vuepress.vuejs.org/config/#index-styl
+ */
+
+.home .hero img
+  max-width 450px!important
+
+@require './tab'
+
+:root, [data-theme='light']
+  --codeColor lighten($accentColor, 20%)
+[data-theme='dark']
+  --codeColor darken($accentColor, 20%)
+
+.sidebar-heading.clickable
+  font-size 1em !important
+  font-weight 400 !important
+
+  &.router-link-active
+    font-weight 600 !important
+    color var(--accentColor) !important
+    border-left-color: var(--accentColor) !important
