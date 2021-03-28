@@ -6,7 +6,7 @@
     "name": "Skick",
     "email": "skick1234@gmail.com"
   },
-  "repository": "distubejs/DisTube-Guide",
+  "repository": "distubejs/guide",
   "scripts": {
     "lint": "eslint . --ext js,md,vue",
     "lint:fix": "eslint . --ext js,md,vue --fix",

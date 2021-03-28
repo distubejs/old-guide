@@ -7,7 +7,7 @@ description: Example bot built with DisTube
 
 
 * [DisTube-Bot](https://skick.xyz/DisTube) - A music bot with reaction controller, filters, DJ mode, user's custom playlist, and voting.
-* [DisTube-Example](https://github.com/skick1234/DisTube-Example) - Example bot with dynamic command handler.
+* [DisTube-Example](https://github.com/distubejs/example) - Example bot with dynamic command handler.
 
 ```javascript
 const Discord = require('discord.js')

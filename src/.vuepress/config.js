@@ -27,7 +27,7 @@ const config = {
 	],
 	plugins: ['vuepress-plugin-element-tabs'],
 	themeConfig: {
-		repo: 'distubejs/DisTube-Guide',
+		repo: 'distubejs/guide',
 		editLinks: true,
 		lastUpdated: true,
 		nav: [
