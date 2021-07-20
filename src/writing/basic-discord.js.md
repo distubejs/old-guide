@@ -1,8 +1,10 @@
 ---
-description: DisTube is a Discord.js v12 module. Let's get started with basic discord.js.
+description: DisTube is a Discord.js module. Let's get started with basic discord.js.
 ---
 
 # Basic Discord.js
+
+This guide is written with discord.js v13. I recommend using distube v3 with discord.js v13.
 
 ## Creating a configuration file
 

@@ -8,10 +8,10 @@ description: >-
 
 ## Reading messages
 
-To read messages you only need to write a [`message`](https://discord.js.org/#/docs/main/master/class/Client?scrollTo=e-message) listener. Here you create a listener for the message event and get the message and save it into a `message` object if it is triggered.
+To read messages you only need to write a [`messageCreate`](https://discord.js.org/#/docs/main/master/class/Client?scrollTo=e-messageCreate) listener. Here you create a listener for the message event and get the message and save it into a `message` object if it is triggered.
 
 ```js
-client.on('message', message => {
+client.on('messageCreate', message => {
 
 })
 ```
@@ -34,10 +34,10 @@ After that, create a `command` variable by calling `args.shift()`, which will ta
 const command = args.shift().toLowerCase()
 ```
 
-Now your `message` listener will look like that:
+Now your `messageCreate` listener will look like that:
 
 ```js
-client.on('message', message => {
+client.on('messageCreate', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return
 
 	const args = message.content.slice(prefix.length).trim().split(' ')
@@ -63,7 +63,7 @@ if (command === 'ping') {
 ::: tab Message Listener
 
 ```js
-client.on('message', message => {
+client.on('messageCreate', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return
 
 	const args = message.content.slice(prefix.length).trim().split(' ')

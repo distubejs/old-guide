@@ -40,7 +40,7 @@ client.on('ready', () => {
 })
 // client.on("debug", console.log)
 
-client.on('message', message => {
+client.on('messageCreate', message => {
 	if (message.author.bot) return
 	if (!message.content.startsWith(config.prefix)) return
 	const args = message.content
