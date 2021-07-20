@@ -8,8 +8,8 @@ description: >-
 
 ## Installing Node.js
 
-::: tip Node >= 14.0
-If you have Node installed, but have an older version \(i.e. anything below 14.0\), you should upgrade to the 14.0.0 or above. DisTube v3 requires node 14.0 or higher.
+::: tip Node.js >= 12.0
+If you have Node.js installed, but have an older version \(i.e. anything below 12.0\), you should upgrade to the 12.0.0 or above.
 :::
 
 #### Windows / macOS <a id="installing-on-windows"></a>
@@ -43,5 +43,5 @@ npm install distube
 And you need to install [required packages](../#requirement) too.
 
 ```bash
-npm install discord.js @discord.js/opus ffmpeg-static
+npm install discord.js @discordjs/voice @discord.js/opus ffmpeg-static sodium
 ```

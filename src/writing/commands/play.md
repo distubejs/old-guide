@@ -5,14 +5,18 @@ description: This page is a follow-up and bases on the code of the main page.
 # Play command
 
 ::: tip Events
-This command will emit `playSong`, `playList`, `addSong`, and `addList` events.
+This command will emit `playSong`, `addSong`, and `addList` events.
+:::
+
+::: tip Built-in search handling
+If `searchSongs` option is enabled and a user send a not-url string, it will emit  `searchResult`, `searchCancel`, `searchDone`, `searchInvalidAnswer`, and `searchNoResult` event
 :::
 
 With [`distube.play()`](https://distube.js.org/DisTube.html#play) method, your bot will join a voice channel and play song from the url or YouTube based on the top match for the string given.
 
 :::: tabs
 ::: tab Play Command
-```javascript
+```js
 if (command === 'play') {
 	distube.play(message, args.join(' '))
 }
@@ -20,8 +24,8 @@ if (command === 'play') {
 :::
 
 ::: tab Message Listener
-```javascript
-client.on('message', message => {
+```js
+client.on('messageCreate', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return
 
 	const args = message.content.slice(prefix.length).trim().split(' ')

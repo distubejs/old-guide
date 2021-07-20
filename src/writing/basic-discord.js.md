@@ -25,15 +25,21 @@ Create a `index.js` file or whatever you wish, as long as it ends with `.js` and
 
 First, import dependencies.
 
-```javascript
+```js
 const Discord = require('discord.js')
 const { prefix, token } = require('./config.json')
 ```
 
-Then, create a Discord.js' client and log in.
+Then, create a Discord.js' client and log in. You can see more about client options at the [discord.js documentation](https://discord.js.org)
 
-```javascript
-const client = new Discord.Client()
+```js
+const client = new Discord.Client({
+	intents: [
+		'GUILDS',
+		'GUILD_VOICE_STATES',
+		'GUILD_MESSAGES',
+	],
+})
 
 client.once('ready', () => {
 	console.log('Logged in!')
@@ -53,10 +59,16 @@ node index.js
 :::
 
 ::: tab index.js
-```javascript
+```js
 const Discord = require('discord.js')
 const { prefix, token } = require('./config.json')
-const client = new Discord.Client()
+const client = new Discord.Client({
+	intents: [
+		'GUILDS',
+		'GUILD_VOICE_STATES',
+		'GUILD_MESSAGES',
+	],
+})
 
 client.once('ready', () => {
 	console.log('Logged in!')

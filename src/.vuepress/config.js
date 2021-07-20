@@ -2,14 +2,14 @@ const { description } = require('../../package')
 const sidebar = require('./sidebar.js')
 
 const config = {
-	title: 'DisTube Guide',
+	title: 'DisTube v3 Guide',
 	description,
 	head: [
 		['meta', { charset: 'utf-8' }],
 		['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
 		['link', { rel: 'icon', href: '/favicon.png' }],
 		['meta', { name: 'twitter:card', content: 'summary' }],
-		['meta', { name: 'og:title', content: 'DisTube Guide' }],
+		['meta', { name: 'og:title', content: 'DisTube v3 Guide' }],
 		['meta', { name: 'og:description', content: 'A guide for building a Discord music bot with DisTube.' }],
 		['meta', { name: 'og:type', content: 'website' }],
 		['meta', { name: 'og:url', content: 'https://distube.js.org/guide' }],
@@ -25,7 +25,12 @@ const config = {
 	globalUIComponents: [
 		'ThemeManager',
 	],
-	plugins: ['vuepress-plugin-element-tabs'],
+	plugins: [[
+		'vuepress-plugin-google-adsense',
+		{
+			adClient: 'ca-pub-5616156852742194',
+		},
+	], 'vuepress-plugin-element-tabs'],
 	themeConfig: {
 		repo: 'distubejs/guide',
 		editLinks: true,
