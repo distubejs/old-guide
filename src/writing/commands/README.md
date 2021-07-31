@@ -93,5 +93,5 @@ const client = new Discord.Client({
 		'GUILD_MESSAGES',
 	],
 })
-const distube = new DisTube(client)
+const distube = new DisTube.default(client)
 ```
