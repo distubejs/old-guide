@@ -42,5 +42,12 @@ module.exports = {
 				},
 			],
 		},
+		{
+			title: 'Additional Information',
+			children: [
+				'/additional-info/notation',
+				'/additional-info/update',
+			],
+		},
 	],
 }

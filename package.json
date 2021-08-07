@@ -16,10 +16,10 @@
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.31.0",
+    "eslint": "^7.32.0",
     "eslint-config-sora": "^3.1.0",
     "eslint-plugin-markdown": "^2.2.0",
-    "eslint-plugin-vue": "^7.14.0",
+    "eslint-plugin-vue": "^7.15.1",
     "vuepress": "^1.8.2"
   },
   "dependencies": {

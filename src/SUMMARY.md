@@ -3,9 +3,7 @@
 * [DisTube](README.md)
 * [Example Bot](example-bot.md)
 
-## How To Create A Music Bot <a id="guide"></a>
-
----
+## How To Create A Music Bot
 
 * [How to create a Discord Music Bot](how-to.md)
 
@@ -22,3 +20,7 @@
 * [Listening to DisTube events](writing-your-bot/listening-to-distube-events/README.md)
   * [Error event](writing-your-bot/listening-to-distube-events/error-event.md)
 
+## Additional Information
+
+* [Notation](additional-info/notation.md)
+* [Update from v2 to v3](additional-info/update.md)
