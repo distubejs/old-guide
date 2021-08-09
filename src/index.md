@@ -4,6 +4,8 @@ description: >-
   audio filters on Discord without any API key.
 ---
 
+# DisTube
+
 <div align="center">
   <p>
     <a href="https://nodei.co/npm/distube/"><img src="https://nodei.co/npm/distube.png?downloads=true&downloadRank=true&stars=true"></a>
@@ -21,8 +23,6 @@ description: >-
   </p>
 </div>
 
-# DisTube
-
 A Discord.js module to simplify your music commands and play songs with audio filters on Discord without any API key.
 
 [DisTube Support Server](https://discord.gg/feaDd9h) - [Frequently Asked Questions](https://discord.gg/feaDd9h)
@@ -38,7 +38,7 @@ A Discord.js module to simplify your music commands and play songs with audio fi
 
 ## Installation
 
-```npm
+```sh
 npm install distube@beta
 ```
 

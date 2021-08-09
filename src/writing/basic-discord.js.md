@@ -55,7 +55,7 @@ Now you can start the file using the node command and your bot should be online.
 :::: tabs
 
 ::: tab Console
-```bash
+```sh
 node index.js
 ```
 :::

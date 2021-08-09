@@ -36,12 +36,12 @@ To install python, simply go to [Download Python](https://www.python.org/downloa
 
 To install DisTube, open the console and install them by using this command.
 
-```bash
+```sh
 npm install distube
 ```
 
 And you need to install [required packages](../#requirement) too.
 
-```bash
+```sh
 npm install discord.js @discordjs/voice @discord.js/opus ffmpeg-static sodium
 ```
