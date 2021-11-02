@@ -40,7 +40,7 @@ To install DisTube, open the console and install them by using this command.
 npm install distube
 ```
 
-And you need to install [required packages](../#requirement) too.
+And you need to install [required packages](~@#requirement) too.
 
 ```sh
 npm install discord.js @discordjs/voice @discord.js/opus sodium
