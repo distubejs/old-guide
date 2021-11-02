@@ -102,7 +102,7 @@ Example:
 
 New options on v3: `#plugins`, `#savePreviousSongs`, `#ytdlOptions`, `#searchCooldown`, `#emptyCooldown`, `#nsfw`, `#emitAddSongWhenCreatingQueue`, and `#emitAddListWhenCreatingQueue`.
 
-You can check the feature of those options in the [DisTubeOptions](/#/docs/DisTube/beta/typedef/DisTubeOptions) documentation.
+You can check the feature of those options in the [DisTubeOptions](/#/docs/DisTube/stable/typedef/DisTubeOptions) documentation.
 
 
 ## DisTube Events
@@ -157,12 +157,12 @@ According to the above example, you will think it's make your code longer. But n
 
 New events on v3:
 
-- [deleteQueue](/#/docs/DisTube/beta/class/DisTube?scrollTo=e-deleteQueue)
-- [disconnect](/#/docs/DisTube/beta/class/DisTube?scrollTo=e-disconnect)
-- [finishSong](/#/docs/DisTube/beta/class/DisTube?scrollTo=e-finishSong)
-- [searchDone](/#/docs/DisTube/beta/class/DisTube?scrollTo=e-searchDone)
-- [searchInvalidAnswer](/#/docs/DisTube/beta/class/DisTube?scrollTo=e-searchInvalidAnswer)
-- [searchNoResult](/#/docs/DisTube/beta/class/DisTube?scrollTo=e-searchNoResult)
+- [deleteQueue](/#/docs/DisTube/stable/class/DisTube?scrollTo=e-deleteQueue)
+- [disconnect](/#/docs/DisTube/stable/class/DisTube?scrollTo=e-disconnect)
+- [finishSong](/#/docs/DisTube/stable/class/DisTube?scrollTo=e-finishSong)
+- [searchDone](/#/docs/DisTube/stable/class/DisTube?scrollTo=e-searchDone)
+- [searchInvalidAnswer](/#/docs/DisTube/stable/class/DisTube?scrollTo=e-searchInvalidAnswer)
+- [searchNoResult](/#/docs/DisTube/stable/class/DisTube?scrollTo=e-searchNoResult)
 
 Click above links and read the docs for more information.
 
@@ -227,9 +227,9 @@ distube.search("A query", {
 
 New methods on v3:
 
-- [playVoiceChannel](/#/docs/DisTube/beta/class/DisTube?scrollTo=playVoiceChannel)
-- [addRelatedSong](/#/docs/DisTube/beta/class/DisTube?scrollTo=addRelatedSong)
-- [previous](/#/docs/DisTube/beta/class/DisTube?scrollTo=previous)
+- [playVoiceChannel](/#/docs/DisTube/stable/class/DisTube?scrollTo=playVoiceChannel)
+- [addRelatedSong](/#/docs/DisTube/stable/class/DisTube?scrollTo=addRelatedSong)
+- [previous](/#/docs/DisTube/stable/class/DisTube?scrollTo=previous)
 
 Click above links and read the docs for more information.
 

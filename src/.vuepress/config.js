@@ -2,7 +2,7 @@ const { description } = require('../../package')
 const sidebar = require('./sidebar.js')
 
 const config = {
-	title: 'DisTube v3 (beta) Guide',
+	title: 'DisTube v3 Guide',
 	description,
 	head: [
 		['meta', { charset: 'utf-8' }],
