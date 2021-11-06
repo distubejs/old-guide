@@ -43,5 +43,5 @@ npm install distube
 And you need to install [required packages](~@#requirement) too.
 
 ```sh
-npm install discord.js @discordjs/voice @discord.js/opus sodium
+npm install discord.js @discordjs/voice @discordjs/opus sodium
 ```
