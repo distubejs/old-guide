@@ -34,6 +34,7 @@ const config = {
 	themeConfig: {
 		repo: 'distubejs/guide',
 		editLinks: true,
+		docsDir: 'src',
 		lastUpdated: true,
 		nav: [
 			{
