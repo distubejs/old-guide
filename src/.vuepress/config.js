@@ -19,18 +19,30 @@ const config = {
 		['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
 		['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
 		['script', { src: 'https://arc.io/widget.min.js#2srirM1z' }],
+		[
+			'script',
+			{
+				async: true,
+				src: 'https://www.googletagmanager.com/gtag/js?id=G-EENC5MXGZT',
+			},
+		],
+		[
+			'script',
+			{},
+			`
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'G-EENC5MXGZT');
+			`,
+		],
 	],
 	base: '/guide/',
 	theme: 'succinct',
 	globalUIComponents: [
 		'ThemeManager',
 	],
-	plugins: [[
-		'vuepress-plugin-google-adsense',
-		{
-			adClient: 'ca-pub-5616156852742194',
-		},
-	], 'vuepress-plugin-element-tabs'],
+	plugins: ['vuepress-plugin-element-tabs'],
 	themeConfig: {
 		repo: 'distubejs/guide',
 		editLinks: true,

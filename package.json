@@ -23,9 +23,7 @@
     "vuepress": "^1.8.2"
   },
   "dependencies": {
-    "@vuepress/plugin-google-analytics": "^1.8.2",
     "vuepress-plugin-element-tabs": "^0.2.8",
-    "vuepress-plugin-google-adsense": "^0.2.1",
     "vuepress-theme-succinct": "github:distubejs/vuepress-theme-succinct"
   }
 }
