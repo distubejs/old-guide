@@ -75,11 +75,11 @@ Example:
 
 - message.guild.me.voice.setSelfMute(true) // djs v12
 - joinVoiceChannel({..., selfMute: true}) // @discordjs/voice
-+ distube.voice.get(message).setSelfMute(true)
++ distube.voices.get(message).setSelfMute(true)
 
 - message.guild.me.voice.setSelfDeaf(true) // djs v12
 - joinVoiceChannel({..., selfDeaf: true}) // @discordjs/voice
-+ distube.voice.get(message).setSelfDeaf(true)
++ distube.voices.get(message).setSelfDeaf(true)
 ```
 
 ## DisTubeOptions
