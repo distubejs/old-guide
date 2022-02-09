@@ -12,8 +12,8 @@ You should write a configuration file for storing some static data that can be e
 
 ```json
 {
-	"prefix": "!",
-	"token": "Your Bot Token"
+    "prefix": "!",
+    "token": "Your Bot Token"
 }
 ```
 
@@ -23,7 +23,7 @@ To get your bot token, you need to visit Discord Developer Portal and copy it fr
 
 ## Writing your bot file
 
-Create a `index.js` file or whatever you wish, as long as it ends with `.js` and open it. 
+Create a `index.js` file or whatever you wish, as long as it ends with `.js` and open it.
 
 First, import dependencies.
 
@@ -36,15 +36,11 @@ Then, create a Discord.js' client and log in. You can see more about client opti
 
 ```js
 const client = new Discord.Client({
-	intents: [
-		'GUILDS',
-		'GUILD_VOICE_STATES',
-		'GUILD_MESSAGES',
-	],
+    intents: ['Guilds', 'GuildVoiceStates', 'GuildMessages'],
 })
 
 client.once('ready', () => {
-	console.log('Logged in!')
+    console.log('Logged in!')
 })
 
 client.login(token)
@@ -55,29 +51,29 @@ Now you can start the file using the node command and your bot should be online.
 :::: tabs
 
 ::: tab Console
+
 ```sh
 node index.js
 ```
+
 :::
 
 ::: tab index.js
+
 ```js
 const Discord = require('discord.js')
 const { prefix, token } = require('./config.json')
 const client = new Discord.Client({
-	intents: [
-		'GUILDS',
-		'GUILD_VOICE_STATES',
-		'GUILD_MESSAGES',
-	],
+    intents: ['Guilds', 'GuildVoiceStates', 'GuildMessages'],
 })
 
 client.once('ready', () => {
-	console.log('Logged in!')
+    console.log('Logged in!')
 })
 
 client.login(token)
 ```
+
 :::
 
 ::::

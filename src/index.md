@@ -1,10 +1,9 @@
 ---
+title: DisTube
 description: >-
-  A Discord.js module to simplify your music commands and play songs with
-  audio filters on Discord without any API key.
+    A Discord.js module to simplify your music commands and play songs with
+    audio filters on Discord without any API key.
 ---
-
-# DisTube
 
 <div align="center">
   <p>
@@ -23,6 +22,8 @@ description: >-
   </p>
 </div>
 
+# DisTube
+
 A Discord.js module to simplify your music commands and play songs with audio filters on Discord without any API key.
 
 [DisTube Support Server](https://discord.gg/feaDd9h) - [Frequently Asked Questions](https://discord.gg/feaDd9h)
@@ -31,26 +32,25 @@ A Discord.js module to simplify your music commands and play songs with audio fi
 
 - Build on `@discordjs/voice`
 - Easy to use and customize
-- Support YouTube, SoundCloud, Facebook, and [700+ more sites](https://ytdl-org.github.io/youtube-dl/supportedsites.html)
+- Support YouTube and audio link
 - Audio filters (bassboost, nightcore, vaporwave,...)
 - Autoplay related songs
 - Plugin system to support more sites ([Plugin List](https://distube.js.org/#/docs/DisTube/stable/plugin/list))
 
+## Requirement
+
+- Node.js 16.9.0 or higher
+- [discord.js](https://discord.js.org) v14
+- [@discordjs/voice](https://github.com/discordjs/voice)
+- [FFmpeg](https://www.ffmpeg.org/download.html)
+- [@discordjs/opus](https://github.com/discordjs/opus)
+- [sodium](https://www.npmjs.com/package/sodium) or [libsodium-wrappers](https://www.npmjs.com/package/libsodium-wrappers)
+
 ## Installation
 
-```sh
+```npm
 npm install distube@latest
 ```
-
-### Requirement
-
-- Node v12 or higher
-- [discord.js](https://discord.js.org) v12 or **v13 _(Recommended)_**
-- [@discordjs/voice](https://github.com/discordjs/voice) - `npm install @discordjs/voice`
-- [FFmpeg](https://www.ffmpeg.org/download.html)
-- [@discordjs/opus](https://github.com/discordjs/opus) - `npm install @discordjs/opus`
-- [sodium](https://www.npmjs.com/package/sodium) or [libsodium-wrappers](https://www.npmjs.com/package/libsodium-wrappers)
-- [python](https://www.python.org/) _(Optional - For [`youtube-dl`](https://youtube-dl.org/) to support [700+ more sites](https://ytdl-org.github.io/youtube-dl/supportedsites.html).)_
 
 ## Documentation
 
@@ -67,4 +67,3 @@ Read DisTube's definitions, properties and events details in the [Documentation 
 - [node-ytdl-core](https://github.com/fent/node-ytdl-core): YouTube scraper ([DisTube Fork](https://github.com/distubejs/node-ytdl-core))
 - [node-ytsr](https://github.com/TimeForANinja/node-ytsr): YouTube search scraper ([DisTube Fork](https://github.com/distubejs/ytsr))
 - [node-ytpl](https://github.com/TimeForANinja/node-ytpl): YouTube playlist resolver ([DisTube Fork](https://github.com/distubejs/ytpl))
-- [youtube-dl-exec](https://github.com/microlinkhq/youtube-dl-exec): [`youtube-dl`](https://youtube-dl.org/) wrapper

@@ -1,7 +1,7 @@
 ---
 description: >-
-  This page and its subpage are a follow-up and bases on the code of the
-  previous page.
+    This page and its subpage are a follow-up and bases on the code of the
+    previous page.
 ---
 
 # Listening to DisTube events

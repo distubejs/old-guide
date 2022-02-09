@@ -11,4 +11,3 @@ First, we need to create a new application on Discord.
 Next, select the "Bot" tab in the left menu and click "Add Bot" button.
 
 ![A wild bot has appeared!](~@/images/image2.png)
-

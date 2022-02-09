@@ -1,25 +1,26 @@
 ---
 description: >-
-  This page and its subpage are a follow-up and bases on the code of the
-  previous page.
+    This page and its subpage are a follow-up and bases on the code of the
+    previous page.
 ---
 
 # Writing your music commands
 
 ## Reading messages
 
-To read messages you only need to write a [`messageCreate`](https://discord.js.org/#/docs/main/master/class/Client?scrollTo=e-messageCreate) listener. Here you create a listener for the message event and get the message and save it into a `message` object if it is triggered.
+To read messages you only need to write a [`messageCreate`](https://discord.js.org/#/docs/discord.js/main/class/Client?scrollTo=e-messageCreate) listener. Here you create a listener for the message event and get the message and save it into a `message` object if it is triggered.
 
 ```js
-client.on('messageCreate', message => {
-
-})
+client.on('messageCreate', message => {})
 ```
 
 If the message either doesn't start with the prefix or was sent by a bot, exit early.
 
 ```js
-if (!message.content.startsWith(prefix) || message.author.bot) return
+client.on('messageCreate', message => {
+    if (!message.content.startsWith(prefix) || message.author.bot)
+        return
+})
 ```
 
 Then create an `args` variable that slices off the prefix entirely, removes the leftover whitespaces and then splits it into an array by spaces.
@@ -38,10 +39,14 @@ Now your `messageCreate` listener will look like that:
 
 ```js
 client.on('messageCreate', message => {
-	if (!message.content.startsWith(prefix) || message.author.bot) return
+    if (!message.content.startsWith(prefix) || message.author.bot)
+        return
 
-	const args = message.content.slice(prefix.length).trim().split(' ')
-	const command = args.shift().toLowerCase()
+    const args = message.content
+        .slice(prefix.length)
+        .trim()
+        .split(' ')
+    const command = args.shift().toLowerCase()
 })
 ```
 
@@ -53,9 +58,7 @@ To add a command, simply compare `command` variable to your command name.
 ::: tab Ping Command
 
 ```js
-if (command === 'ping') {
-	message.channel.send('Pong!')
-}
+if (command === 'ping') message.channel.send('Pong!')
 ```
 
 :::
@@ -64,14 +67,16 @@ if (command === 'ping') {
 
 ```js
 client.on('messageCreate', message => {
-	if (!message.content.startsWith(prefix) || message.author.bot) return
+    if (!message.content.startsWith(prefix) || message.author.bot)
+        return
 
-	const args = message.content.slice(prefix.length).trim().split(' ')
-	const command = args.shift().toLowerCase()
+    const args = message.content
+        .slice(prefix.length)
+        .trim()
+        .split(' ')
+    const command = args.shift().toLowerCase()
 
-	if (command === 'ping') {
-		message.channel.send('Pong!')
-	}
+    if (command === 'ping') message.channel.send('Pong!')
 })
 ```
 
@@ -87,11 +92,7 @@ const Discord = require('discord.js')
 const DisTube = require('distube')
 const { prefix, token } = require('./config.json')
 const client = new Discord.Client({
-	intents: [
-		'GUILDS',
-		'GUILD_VOICE_STATES',
-		'GUILD_MESSAGES',
-	],
+    intents: ['Guilds', 'GuildVoiceStates', 'GuildMessages'],
 })
 const distube = new DisTube.default(client)
 ```
