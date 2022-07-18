@@ -19,11 +19,15 @@ With [`distube.play()`](https://distube.js.org/DisTube.html#play) method, your b
 
 ```js
 if (command === 'play')
-    distube.play(message.member.voice.channel, args.join(' '), {
-        message,
-        textChannel: message.channel,
-        member: message.member,
-    })
+    distube
+        .play(message.member.voice.channel, args.join(' '), {
+            message,
+            textChannel: message.channel,
+            member: message.member,
+        })
+        .catch(err => {
+            message.reply(err.message)
+        })
 ```
 
 :::
@@ -44,11 +48,15 @@ client.on('messageCreate', message => {
     if (command === 'ping') message.channel.send('Pong!')
 
     if (command === 'play')
-        distube.play(message.member.voice.channel, args.join(' '), {
-            message,
-            textChannel: message.channel,
-            member: message.member,
-        })
+        distube
+            .play(message.member.voice.channel, args.join(' '), {
+                message,
+                textChannel: message.channel,
+                member: message.member,
+            })
+            .catch(err => {
+                message.reply(err.message)
+            })
 })
 ```
 

@@ -3,6 +3,7 @@
 ## Before you start
 
 v4 requires discord.js v14 to use, so make sure you're up to date. To update your discord.js code, check [their guide](https://discordjs.guide/) before updating DisTube code.
+Also, update plugins if you're using them.
 
 ## DisTube
 
@@ -11,9 +12,9 @@ v4 requires discord.js v14 to use, so make sure you're up to date. To update you
 Built-in `youtube-dl` plugin is removed for more convenient updating in the future. Now, you can use new [`@distube/yt-dlp` plugin](https://www.npmjs.com/package/@distube/yt-dlp).
 
 ```diff
-- const distube = new DisTube({ youtubeDL: true, updateYouTubeDL: true })
+- const distube = new DisTube({ youtubeDL: true, updateYouTubeDL: false })
 + const { YtDlpPlugin } = require("@distube/yt-dlp")
-+ const distube = new DisTube({ plugins: [new YtDlpPlugin()] })
++ const distube = new DisTube({ plugins: [new YtDlpPlugin({ update: false })] })
 ```
 
 ### DisTube#play
@@ -30,6 +31,22 @@ Built-in `youtube-dl` plugin is removed for more convenient updating in the futu
 ```diff
 - distube.play(..., { unshift: true })
 + distube.play(..., { position: 1 })
+```
+
+-   Now this method throw an error if DisTube cannot play the input song instead of emitting to the `error` event.
+
+```js
+distube.play().catch(err => {
+    message.reply(err)
+})
+// Or
+async function play() {
+    try {
+        await distube.play()
+    } catch (err) {
+        message.reply(err)
+    }
+}
 ```
 
 ### DisTube#playVoiceChannel
@@ -54,4 +71,29 @@ const songs = ["https://www.youtube.com/watch?v=xxx", "https://www.youtube.com/w
 +     parallel: true
 + });
 + distube.play(message.member.voice.channel, playlist);
+```
+
+## Queue
+
+### Queue#setFilter
+
+-   `Queue#setFilter` has been removed. You can use `Queue#filters` instead.
+
+### Queue#filters
+
+-   `Queue#filters` is now `FilterManager`, which is more flexible and support custom filters.
+
+```js
+queue.filters.add('a-filter')
+// filters: ["a-filter"]
+queue.filters.add(['another-filter', 'a-third-filter'])
+// filters: ["a-filter", "another-filter", "a-third-filter"]
+queue.filters.add(['a-third-filter'])
+// filters: ["a-filter", "another-filter", "a-third-filter"]
+queue.filters.remove(['a-filter', 'a-third-filter'])
+// filters: ["another-filter"]
+queue.filters.set(['1', '2', '3'])
+// filters: ["1", "2", "3"]
+queue.filters.clear()
+// filters: []
 ```
