@@ -65,7 +65,7 @@ const config = {
             `,
         ],
     ],
-    base: '/guide/',
+    base: '/old-guide/',
     theme: 'succinct',
     globalUIComponents: ['ThemeManager'],
     plugins: ['vuepress-plugin-element-tabs'],
